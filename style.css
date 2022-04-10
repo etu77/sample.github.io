@@ -1,0 +1,297 @@
+@charset "utf-8";
+
+html {
+    font-size: 100%;
+}
+
+body {
+    color: #333;
+    font-size: 1rem;
+    font-family: 'Noto Sans', 'Noto Sans JP', sans-serif;
+}
+
+a {
+    color: #333;
+    text-decoration: none
+}
+
+img {
+    max-width: 100%;
+}
+
+li {
+    list-style: none;
+}
+
+.wrapper {
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 0 16px;
+}
+
+.readmore {
+    text-align: center;
+    font-size: 0.875rem;
+}
+
+.readmore a {
+    padding-bottom: 1px;
+    color: #333;
+    position: relative;
+}
+
+.readmore a::after {
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    background: #333;
+    left: 0px;
+    bottom: 0px;
+    transition: all 200ms ease;
+}
+
+.readmore a:hover::after {
+    opacity: 0;
+    transform: translateY(3px);
+}
+
+#header {
+    width: 100%;
+    background-color: #fff;
+    position: fixed;
+    z-index: 10;
+}
+
+#header .site-title {
+    padding: 20px 16px;
+    line-height: 1px;
+}
+
+#header .site-title img {
+    width: 145px;
+}
+
+#navi {
+    background-color: #333333;
+}
+
+#navi a {
+    color: #fff;
+}
+
+#navi ul {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#navi li {
+    font-size: 0.875rem;
+    padding: 10px 60px 10px 0;
+}
+
+#pickup {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 150px;
+    margin-bottom: 60px;
+}
+
+#pickup article {
+    width: 32%;
+}
+
+#pickup p {
+    font-weight: bold;
+    margin: 10px 0 15px 0;
+}
+
+#container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 60px;
+}
+
+main {
+    width: 65%;
+}
+
+#container article {
+    margin-bottom: 80px;
+}
+
+#container h2 {
+    margin: 10px 0 15px 0;
+}
+
+main li {
+    margin-right: 20px;
+    font-size: 0.875rem;
+}
+
+main ul {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+}
+
+main p {
+    padding: 10px 40px 30px 40px;
+}
+
+#sidebar {
+    width: 33%;
+    padding: 20px;
+}
+
+#sidebar .section-title {
+    font-size: 1.125rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+#sidebar p {
+    font-size: 0.875rem;
+    text-align: left;
+}
+
+.profile {
+    text-align: center;
+    margin-bottom: 60px;
+}
+.profile img {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    margin-bottom: 30px;
+}
+
+.ranking {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.ranking p {
+    margin-bottom: 30px;
+}
+
+.archive {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.archive ul {
+    border-bottom: 1px solid #777;
+}
+.archive li {
+    border-top: 1px solid #777;
+    padding: 20px;
+    text-align: left;
+    font-size: 0.875rem;
+}
+
+#footer {
+    background-color: #F7F7F7;
+    font-size: 0.875rem;
+}
+
+#footer .content {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+#content {
+    width: 30%;
+}
+
+#footer .footer-title {
+    margin-bottom: 30px;
+    font-size: 1.125rem;
+    font-weight: bold;
+}
+
+#footer .about p {
+    margin-bottom: 20px;
+}
+
+#footer .about li {
+    margin-bottom: 5px;
+}
+
+#footer ul .arrow {
+    position: relative;
+    display: inline-block;
+    padding-left: 12px;
+    color: #333;
+}
+
+#footer ul .arrow::before {
+    content: '';
+    position: absolute;
+    border-style: solid;
+    border-width: 6px 0 6px 8px;
+    border-color: transparent transparent transparent #333;
+    width: 0;
+    height: 0;
+    top: 50%;
+    left: 0;
+    margin-top: -6px;
+}
+
+#footer .menu ul {
+    border-bottom: 1px solid #777;
+}
+
+#footer .menu li {
+    border-top: 1px solid #777;
+    padding: 15px;
+    text-align: left;
+}
+
+#footer .copyright {
+    font-size: 0.75rem;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* SP */
+
+@media screen and (max-width: 767px) {
+    #pickup {
+        flex-direction: column;
+    }
+
+    #pickup article {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    #container {
+        flex-direction: column;
+    }
+
+    #container main {
+        width: 100%;
+    }
+
+    #contaier article {
+        margin-bottom: 90px;
+    }
+
+    #sidebar {
+        width: 100%;
+        padding: 0px;
+    }
+
+    #footer .content {
+        flex-direction: column;
+    }
+
+    #content {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+}
